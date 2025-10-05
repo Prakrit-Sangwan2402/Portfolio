@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakrit Sangwan - Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #202020;
+            color: #ddd;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #333;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #ff5e00;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff5e00;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-container img {
+            width: 220px;
+            height: 280px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 94, 0, 0.3);
+        }
+
+        .hero-text b {
+            color: #ff5e00;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #ff5e00;
+        }
+
+        .hero-text p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .about {
+            background-color: #181818;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .about h2 {
+            color: #ff5e00;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .skills {
+            text-align: center;
+            background-color: #181818;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 60px 20px;
+        }
+
+        .skills h2 {
+            color: #ff5e00;
+            margin-bottom: 20px;
+        }
+
+        .skills p {
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .skills .skill-item {
+            display: inline-block;
+            border: 1px solid #ff5e00;
+            border-radius: 25px;
+            padding: 8px 14px;
+            margin: 5px;
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        .skills .skill-item:hover {
+            background-color: #ff5e00;
+            color: #fff;
+        }
+
+        .projects {
+            text-align: center;
+        }
+
+        .projects h2 {
+            color: #ff5e00;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background-color: #282828;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 15px rgba(255, 94, 0, 0.3);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .contact {
+            background-color: #181818;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            color: #ff5e00;
+            margin-bottom: 20px;
+        }
+
+        .contact span {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 14px;
+            border: 1px solid #ff5e00;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .contact span:hover {
+            background-color: #ff5e00;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            font-size: 13px;
+            border-top: 1px solid #333;
+        }
+
+        footer a {
+            color: #c28765;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 850px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-card {
+                width: 90%;
+                margin: 15px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">P.S.</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container">
+            <img src="1.jpg" alt="Profile Photo">
+            <div class="hero-text">
+                <h1>Hey there<span>!</span></h1>
+                <p>I'm <b>Prakrit Sangwan</b>, a passionate Web Developer. I'm always learning and experimenting with
+                    new
+                    things—from creating clean, responsive designs to building interactive web features. My curiosity,
+                    creativity, and love for bringing ideas to life keep me motivated every day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I study at Scaler School of Technology and am pursuing a BSc in Computer Science from BITS Pilani. My journey
+            into web development started out of curiosity about how websites work. Since then, I've been learning HTML,
+            CSS,
+            Java, and JavaScript to bring my ideas to life. Outside coding, I enjoy exploring new things and
+            contributing
+            positively to the world.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <p>Here are some of the tools I work with regularly:</p>
+        <div>
+            <span class="skill-item">HTML5</span>
+            <span class="skill-item">CSS3</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">Java</span>
+            <span class="skill-item">Git</span>
+            <span class="skill-item">VS Code</span>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div>
+            <a href="cryptocode.html" target="_blank">
+                <div class="project-card">
+                    <img src="crypto.PNG" alt="Crypto Tracker App">
+                    <h3>Crypto Tracker App</h3>
+                    <p>I created the Crypto Tracker App to help users easily keep track of real-time cryptocurrency
+                        prices and trends. Using HTML, CSS, and JavaScript, it pulls live data from APIs and presents it in a
+                        clean, simple, and user-friendly interface.</p>
+                </div>
+            </a>
+
+            <a href="rainwaterappcode.html" target="_blank">
+                <div class="project-card">
+                    <img src="rainwater.PNG" alt="Rainwater Harvesting App">
+                    <h3>Rainwater Harvesting App</h3>
+                    <p>I built this app for the Smart India Hackathon 2025 to help people explore rooftop rainwater
+                        harvesting. By entering your roof area and location, the app provides personalized suggestions to make water
+                        management more sustainable.</p>
+                </div>
+            </a>
+
+            <a href="quotegenerator.html" target="_blank">
+                <div class="project-card">
+                    <img src="quote.PNG" alt="Quote Generator">
+                    <h3>Quote Generator</h3>
+                    <p>I created the Quote Generator App to help users discover inspiring, motivational, and
+                        thought-provoking quotes anytime they need a little boost. Using HTML, CSS, and JavaScript, it randomly selects quotes
+                        from a curated list and displays them in a clean, simple, and user-friendly interface.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p style="color:#bbb;">Let's collaborate or chat about ideas!</p>
+        <div>
+            <span><a href="mailto:sangwanprakrit@gmail.com">Email</a></span>
+            <span><a href="https://github.com/Prakrit-Sangwan2402" target="_blank">GitHub</a></span>
+            <span><a href="https://codeforces.com/profile/Prakrit_Sangwan" target="_blank">Codeforces</a></span>
+            <span><a href="https://www.linkedin.com/in/prakrit-sangwan-799095376/" target="_blank">LinkedIn</a></span>
+            <span><a href="https://leetcode.com/u/prakrit02/" target="_blank">LeetCode</a></span>
+        </div>
+    </section>
+
+    <footer>
+        ~ 2025 Prakrit Sangwan <a href="#hero">Back to top</a>
+    </footer>
+
+</body>
+
+</html>
